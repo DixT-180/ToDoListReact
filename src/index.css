@@ -1,0 +1,67 @@
+body {
+ 
+  margin: 0;
+  padding: 0;
+ margin-left: 5%;
+  margin-right: 5%;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.InputHeader{
+  background-color: antiquewhite;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.eachItem{
+  
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: violet;
+  
+}
+
+.eachItem-item{
+    overflow: hidden;
+    word-wrap: break-word;
+   
+}
+
+.InputHeader{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+button {
+  background:none;
+  border: none;
+} 
+
+.eachItem{
+  margin-top: 10px;
+}
+input{
+  border-radius: 5px;
+}
+
+
+.right-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
