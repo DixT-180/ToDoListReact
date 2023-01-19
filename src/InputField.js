@@ -5,22 +5,17 @@ import {IoMdAdd } from 'react-icons/io';
 import {BiEdit} from 'react-icons/bi';
 
 
-
-
-
 const getLocalItems = () =>{
     let list = localStorage.getItem('lists');
     console.log(list)
     if (list){
         return JSON.parse(localStorage.getItem('lists'));
     }
-
 else{
     return [];
 }
 
 }
-
 
 const InputField = () => {
 
@@ -28,7 +23,6 @@ const [textValue,setTextValue] = useState('')
 const [todoValue,setodoValue] = useState(getLocalItems());
 const [toggleSubmit, setToggle] = useState(true)
 const [idValue,setidValue] = useState(null);
-
 const SubmitText = ()=>{
     console.log('sub')
   
@@ -47,15 +41,10 @@ setodoValue(
 setToggle(true)
     }
 
-    
-    
     else {
         if(textValue.length < 70){
-
-          
-
-        
-          const textValueInput = {id:new Date().getTime().toString(),name:textValue}
+       
+ const textValueInput = {id:new Date().getTime().toString(),name:textValue}
 setodoValue([...todoValue,textValueInput])
 setTextValue('')
         }
@@ -86,35 +75,23 @@ const editItem = (e_id)=>{
 
 }
 
-
-
 useEffect(()=>{
     localStorage.setItem('lists',JSON.stringify(todoValue))
 },[todoValue])
 
 
-
   return (
     <>
      <div><h2>To-DO using ReactUseState</h2></div>
-
     <div className='InputHeader'>
-  
-    <input size="25" className='' placeholder='Enter To-Do Task here' value={textValue } onChange={(e)=>setTextValue(e.target.value)}
-   
+ 
+    <input size="25" className='' placeholder='Enter To-Do Task here' value={textValue } onChange={(e)=>setTextValue(e.target.value)}  
     /> 
      {toggleSubmit?<button  onClick={SubmitText
     
     }  > <IoMdAdd  size={25}/></button>:   <button className='edititems'  onClick={SubmitText}  > < BiEdit size={25}/> </button>}
 
-
-   
-
-   
-
-
     </div>
-
     <div className='showItems'>
 
 {
