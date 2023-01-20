@@ -19,13 +19,11 @@ else{
 
 const InputField = () => {
 
-const [textValue,setTextValue] = useState('')
-const [todoValue,setodoValue] = useState(getLocalItems());
-const [toggleSubmit, setToggle] = useState(true)
-const [idValue,setidValue] = useState(null);
+const [textValue,setTextValue] = useState('')                    //save each user input to a state variable textValue 
+const [todoValue,setodoValue] = useState(getLocalItems());     // save to do tasks to an array
+const [toggleSubmit, setToggle] = useState(true)               // toggle between add new task and edit existing to do task
+const [idValue,setidValue] = useState(null);                    //make changes of an edit to existing to do.
 const SubmitText = ()=>{
-    console.log('sub')
-  
     if(!textValue){
         console.log("empty")
     } 
@@ -67,11 +65,9 @@ const editItem = (e_id)=>{
     let newEditItem = todoValue.find((elem)=>{
         return elem.id ===e_id
     });
-    console.log(newEditItem,"xxx")
      setToggle(false)
      setTextValue(newEditItem.name)
      setidValue(e_id)
-     console.log("debug",newEditItem.name)
 
 }
 
